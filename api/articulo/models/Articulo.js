@@ -1,10 +1,37 @@
-'use strict';
+"use strict";
 
 /**
  * Lifecycle callbacks for the `Articulo` model.
  */
 
 module.exports = {
+  // Para que se ejecute cada vez que creamos un articulo nuevo
+  afterCreate: async entry => {
+    axios
+      .post(strapi.config.currentEnvironment.staticWebsiteBuildURL, {})
+      .catch(() => {
+        // Ignore
+      });
+  },
+
+  // Para que se ejecute cada vez que actualizamos un articulo
+  afterUpdate: async entry => {
+    axios
+      .post(strapi.config.currentEnvironment.staticWebsiteBuildURL, {})
+      .catch(() => {
+        // Ignore
+      });
+  },
+
+  // Para que se ejecute cada vez que borramos un articulo
+  afterDestroy: async entry => {
+    axios
+      .post(strapi.config.currentEnvironment.staticWebsiteBuildURL, {})
+      .catch(() => {
+        // Ignore
+      });
+  }
+
   // Before saving a value.
   // Fired before an `insert` or `update` query.
   // beforeSave: async (model, attrs, options) => {},
@@ -20,7 +47,7 @@ module.exports = {
   // After fetching a value.
   // Fired after a `fetch` operation.
   // afterFetch: async (model, response, options) => {},
-  
+
   // Before fetching all values.
   // Fired before a `fetchAll` operation.
   // beforeFetchAll: async (model, columns, options) => {},
