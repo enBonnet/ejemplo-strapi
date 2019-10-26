@@ -1,0 +1,24 @@
+{
+  "connection": "default",
+  "collectionName": "articulos",
+  "info": {
+    "name": "articulo",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "descripcion": {
+      "required": true,
+      "type": "richtext"
+    }
+  }
+}
