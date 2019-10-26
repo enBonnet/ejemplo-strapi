@@ -23,6 +23,7 @@
     "strapi-plugin-email": "3.0.0-beta.17.4",
     "strapi-plugin-upload": "3.0.0-beta.17.4",
     "strapi-plugin-users-permissions": "3.0.0-beta.17.4",
+    "strapi-provider-upload-cloudinary": "^3.0.0-beta.17.4",
     "strapi-utils": "3.0.0-beta.17.4"
   },
   "author": {
